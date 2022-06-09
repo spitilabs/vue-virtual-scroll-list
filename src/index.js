@@ -272,7 +272,7 @@ const VirtualList = Vue.component('virtual-list', {
       this.emitEvent(offset, clientSize, scrollSize, evt)
     },
 
-    onWheel (evt) {
+    userScroll (evt) {
       // this.$emit('wheel', evt, this.virtual.getRange())
     },
 
@@ -340,7 +340,7 @@ const VirtualList = Vue.component('virtual-list', {
       ref: 'root',
       on: {
         '&scroll': !pageMode && this.onScroll,
-        '&wheel': !pageMode && this.onWheel
+        '&wheel': !pageMode && this.userScroll
       }
     }, [
       // header slot

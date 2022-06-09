@@ -940,7 +940,7 @@
         this.virtual.handleScroll(offset);
         this.emitEvent(offset, clientSize, scrollSize, evt);
       },
-      onWheel: function onWheel(evt) {// this.$emit('wheel', evt, this.virtual.getRange())
+      userScroll: function userScroll(evt) {// this.$emit('wheel', evt, this.virtual.getRange())
       },
       // emit event in special position
       emitEvent: function emitEvent(offset, clientSize, scrollSize, evt) {
@@ -1034,7 +1034,7 @@
         ref: 'root',
         on: {
           '&scroll': !pageMode && this.onScroll,
-          '&wheel': !pageMode && this.onWheel
+          '&wheel': !pageMode && this.userScroll
         }
       }, [// header slot
       header ? h(Slot, {
