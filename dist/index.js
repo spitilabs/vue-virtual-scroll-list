@@ -941,7 +941,7 @@
         this.emitEvent(offset, clientSize, scrollSize, evt);
       },
       onWheel: function onWheel(evt) {
-        this.$emit('wheel', evt);
+        this.$emit('wheel', evt, this.virtual.getRange());
       },
       // emit event in special position
       emitEvent: function emitEvent(offset, clientSize, scrollSize, evt) {

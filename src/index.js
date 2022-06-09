@@ -273,7 +273,7 @@ const VirtualList = Vue.component('virtual-list', {
     },
 
     onWheel (evt) {
-      this.$emit('wheel', evt)
+      this.$emit('wheel', evt, this.virtual.getRange())
     },
 
     // emit event in special position
