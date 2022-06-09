@@ -335,7 +335,7 @@ const VirtualList = Vue.component('virtual-list', {
     return h(rootTag, {
       ref: 'root',
       on: {
-        '&scroll': !pageMode && this.onScroll,
+        '&scroll': !pageMode && this.onScroll
       }
     }, [
       // header slot
