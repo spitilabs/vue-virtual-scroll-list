@@ -732,7 +732,6 @@
       }
     },
     created: function created() {
-      this.timer = null;
       this.isHorizontal = this.direction === 'horizontal';
       this.directionKey = this.isHorizontal ? 'scrollLeft' : 'scrollTop';
       this.installVirtual(); // listen item size change
