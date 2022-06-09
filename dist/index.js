@@ -940,9 +940,9 @@
         this.virtual.handleScroll(offset);
         this.emitEvent(offset, clientSize, scrollSize, evt);
       },
-      onWheel: function onWheel(evt) {
-        this.$emit('wheel', evt, this.virtual.getRange());
-      },
+      // onWheel (evt) {
+      //   this.$emit('wheel', evt, this.virtual.getRange())
+      // },
       // emit event in special position
       emitEvent: function emitEvent(offset, clientSize, scrollSize, evt) {
         this.$emit('scroll', evt, this.virtual.getRange());
@@ -1034,8 +1034,8 @@
       return h(rootTag, {
         ref: 'root',
         on: {
-          '&scroll': !pageMode && this.onScroll,
-          '&wheel': !pageMode && this.onWheel
+          '&scroll': !pageMode && this.onScroll // '&wheel': !pageMode && this.onWheel
+
         }
       }, [// header slot
       header ? h(Slot, {
